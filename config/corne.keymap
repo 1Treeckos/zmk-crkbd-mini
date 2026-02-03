@@ -10,6 +10,7 @@
 #define SYM 4
 #define EXTRA 5
 #define LOL 6
+
 / {
     behaviors {
         hm: homerow_mods {
