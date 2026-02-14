@@ -9,10 +9,18 @@
 #define FUN 3
 #define SYM 4
 #define EXTRA 5
-#define LOL 6
+#define TEKKEN8 6
 
 / {
     behaviors {
+         hsw: hold_to_switch {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            bindings = <&tog>, <&kp>;
+        };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -187,9 +195,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &kp Q  &kp W       &kp E            &kp R          &kp T        &kp Y      &kp U        &kp I           &kp O       &kp P          &trans
-&trans  &kp A  &hm LALT S  &hm LCTRL D      &hm LSHFT F    &kp G        &kp H      &hm LSHFT J  &hm LCTRL K     &hm LALT L  &hm RGUI SEMI  &trans
-&trans  &kp Z  &kp X       &kp C            &kp V          &kp B        &kp N      &kp M        &kp COMMA       &kp DOT     &kp SLASH      &trans
+&trans   &hsw 6 Q  &kp W       &kp E            &kp R          &kp T        &kp Y      &kp U        &kp I           &kp O       &kp P          &trans
+&trans   &kp A     &hm LALT S  &hm LCTRL D      &hm LSHFT F    &kp G        &kp H      &hm LSHFT J  &hm LCTRL K     &hm LALT L  &hm RGUI SEMI  &trans
+&trans   &kp Z     &kp X       &kp C            &kp V          &kp B        &kp N      &kp M        &kp COMMA       &kp DOT     &kp SLASH      &trans
                            &lt 4 SPACE      &lt 1 SPACE    &kp RET      &lt 3 TAB  &lt 2 BSPC   &kp DEL
             >;
         };
@@ -254,6 +262,16 @@
 &trans  &trans       &trans        &mmv MOVE_UP      &trans   &msc SCRL_DOWN            &trans  &mkp LCLK  &mkp RCLK  &trans  &trans       &trans
 &trans  &trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                                      &trans        &trans      &trans            &trans  &trans  &trans
+            >;
+        };
+
+        TEKKEN8 {
+                display-name = "TEKKEN8";
+            bindings = <
+&trans  &kp Q  &kp W  &kp E    &kp R    &kp T        &kp Y      &kp U  &kp I        &kp O       &kp P          &trans
+&trans  &kp A  &kp S  &kp  D   &kp F    &kp G        &kp H      &kp J  &kp K        &kp L       &kp SEMI       &trans
+&trans  &kp Z  &kp X  &kp C    &kp V    &kp B        &kp N      &kp M  &kp COMMA    &kp DOT     &kp SLASH      &trans
+                     &trans         &trans          &trans       &trans    &trans  &tog 6
             >;
         };
     };
