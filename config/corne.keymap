@@ -178,7 +178,7 @@
         compatible = "zmk,keymap";
 
         DEF {
-            display_name = "Base";
+            display-name = "Base";
 
             // -----------------------------------------------------------------------------------------
             // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
@@ -195,7 +195,7 @@
         };
 
         NAV {
-            display_name = "Navigation";
+            display-name = "Navigation";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
@@ -212,7 +212,7 @@
         };
 
         NUM {
-            display_name = "Number";
+            display-name = "Number";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
@@ -229,7 +229,7 @@
         };
 
         FUN {
-            display_name = "FnKeys";
+            display-name = "FnKeys";
             bindings = <
 &trans      &kp C_PREV      &kp C_VOL_DN    &kp C_VOL_UP    &kp C_NEXT    &bootloader                    &kp PSCRN           &kp F1      &kp F2      &kp F3      &kp F10     &trans
 &trans      &trans          &kp LALT        &kp LCTRL       &kp LSHFT     &studio_unlock                 &kp PAUSE_BREAK     &kp F4      &kp F5      &kp F6      &kp F11     &trans
@@ -238,7 +238,7 @@
             >;
         };
         SYM {
-                display_name = "Symbols";
+                display-name = "Symbols";
             bindings = <
 &trans    &kp AT    &kp MINUS    &kp RBKT    &kp RBRC    &kp EXCL           &kp UNDER    &trans       &trans         &trans      &kp HASH     &trans
 &trans    &trans    &kp UNDER    &kp NUBS    &trans      &kp BSLH           &trans       &kp RSHFT    &kp RCTRL      &kp RALT    &kp RGUI     &trans
@@ -248,7 +248,7 @@
         };
 
          EXTRA {
-                display_name = "Extra Stuff";
+                display-name = "Extra Stuff";
             bindings = <
 &trans  &trans       &trans         &trans          &trans      &msc SCRL_UP    &trans  &trans  &trans  &trans  &trans      &trans
 &trans  &trans       &trans        &mmv MOVE_UP      &trans   &msc SCRL_DOWN            &trans  &mkp LCLK  &mkp RCLK  &trans  &trans       &trans
